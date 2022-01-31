@@ -9,6 +9,11 @@
   padding: 10px;
 }
 
+.logoContainer {
+  height: 42px;
+  width: 118px;
+}
+
 .article > * {
   display: inline-block;
   padding: 4px 0;

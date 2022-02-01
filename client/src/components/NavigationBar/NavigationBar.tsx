@@ -1,14 +1,20 @@
 import React from 'react';
 
 import Home24Logo from '../../assets/images/home-24-logo.svg';
+import './NavigationBar.css';
 
 const NavigationBar = () => {
   return (
-    <div className='header'>
-      <div className='logoContainer'>
-        <img src={Home24Logo} alt='home24 logo' />
+    <div className='navBar'>
+      <div className='navBarContent'>
+        <div className='logoContainer'>
+          <img src={Home24Logo} alt='home24 logo' />
+        </div>
+        <div className='searchContainer'>
+          <input className='searchInput' placeholder='Search for products, brands and categories...' />
+          <button className='searchButton'>Go</button>
+        </div>
       </div>
-      <input placeholder='Search' />
     </div>
   );
 };

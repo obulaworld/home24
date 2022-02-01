@@ -1,0 +1,36 @@
+.sidebar {
+  grid-area: sidebar;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 0 0 0 8px;
+  padding: 8px 0;
+}
+
+.sidbarHeader {
+  text-transform: capitalize;
+}
+
+.sidebarMenu {
+  font-size: 0.85rem;
+  max-width: 100%;
+  padding-top: 0.4375rem;
+  text-transform: capitalize;
+}
+
+.sidebarMenu > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sidebarMenuActive > a, .sidebarMenu:hover > a {
+  color: #f45334;
+}

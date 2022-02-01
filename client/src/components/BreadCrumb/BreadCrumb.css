@@ -1,0 +1,50 @@
+.breadcrumb {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #fff;
+  grid-area: breadcrumb;
+  margin-bottom: 24px;
+}
+
+.breadCrumbHeaderContainer {
+  margin: 0 auto;
+  width: 60rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.breadCrumbLocation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breadCrumbLocationText {
+    text-transform: capitalize;
+}
+
+.breadCrumbLocationText::after {
+  border-style: solid;
+  border-width: 0.05em 0.05em 0 0;
+  color: #9b9b9b;
+  content: '';
+  display: inline-block;
+  height: 0.4em;
+  opacity: 0.8;
+  position: relative;
+  right: -0.25rem;
+  top: 0.5rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.4em;
+  margin-right: 16px;
+}
+
+.breadCrumbLocationResult {
+  color: #767a81;
+  font-size: 0.625rem;
+}

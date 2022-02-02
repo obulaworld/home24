@@ -7,7 +7,6 @@
   display: grid;
   grid-gap: 16px;
   grid-template-columns: 13% 50%;
-  min-height: 100vh;
   margin: 0 auto;
   width: 60rem;
 }

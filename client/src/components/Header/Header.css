@@ -17,7 +17,7 @@
   text-transform: capitalize;
 }
 
-.breadCrumbSorter:hover {
+.breadCrumbSorter:hover, .breadCrumbSorterActive {
   background-color: transparent;
   border: 0.0625rem solid #f45334;
   color: #f45334;

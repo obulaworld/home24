@@ -12,6 +12,12 @@ export type Article = {
   images: Image[]
 }
 
+export enum SORT_TYPE {
+  ALPHABETICALLY = 0,
+  HIGH_TO_LOW = 1,
+  LOW_TO_HIGH = 2,
+}
+
 export type ChildCategory = {
   name: string
   urlPath: string

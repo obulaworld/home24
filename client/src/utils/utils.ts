@@ -1,4 +1,4 @@
-export const intlNumberFormatValues = ['de-DE', 'currency', 'EUR'];
+export const intlNumberFormatValues: string[] = ['de-DE', 'currency', 'EUR'];
 
 export const formatter = new Intl.NumberFormat(intlNumberFormatValues[0], {
   style: intlNumberFormatValues[1],

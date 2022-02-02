@@ -18,7 +18,7 @@ const BreadCrumb = ({ categories }: IBreadCrumbProps) => {
         <div className='breadCrumbLocation'>
           <div>
             <span className='breadCrumbLocationText'>Heimat</span>
-            <span>{currentCategory ? currentCategory.name : 'Möbel'}</span>
+            <span data-testid='test-mobel'>{currentCategory ? currentCategory.name : 'Möbel'}</span>
           </div>
           <span className='breadCrumbLocationResult'>
             {categories[0]?.articleCount} items

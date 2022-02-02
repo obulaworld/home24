@@ -9,7 +9,7 @@
 
 .breadCrumbHeaderContainer {
   margin: 0 auto;
-  width: 60rem;
+  width: 70rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;

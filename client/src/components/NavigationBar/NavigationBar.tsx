@@ -8,10 +8,10 @@ const NavigationBar = () => {
     <div className='navBar'>
       <div className='navBarContent'>
         <div className='logoContainer'>
-          <img src={Home24Logo} alt='home24 logo' />
+          <img data-testid='test-logo' src={Home24Logo} alt='home24 logo' />
         </div>
-        <div className='searchContainer'>
-          <input className='searchInput' placeholder='Search for products, brands and categories...' />
+        <div className='searchContainer' data-testid='search-container'>
+          <input data-testid='test-search-input' className='searchInput' placeholder='Search for products, brands and categories...' />
           <button className='searchButton'>Go</button>
         </div>
       </div>

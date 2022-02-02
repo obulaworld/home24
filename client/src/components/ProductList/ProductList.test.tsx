@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import ProductList from '../../views/ProductsView/ProductsView';
+import { getCategories } from '../../utils/test-utils';
+import ProductList from './ProductList';
 
 test('renders the ProductList', () => {
-  const { getByText } = render(<ProductList />);
-  const linkElement = getByText(/home24/i);
-  expect(linkElement).toBeInTheDocument();
+  const { getByText } = render(<ProductList categories={getCategories()} />);
+  expect(getByText('Premium Komfortmatratze Smood')).toBeInTheDocument();
+  expect(getByText('Schlafsofa Latina')).toBeInTheDocument();
 });

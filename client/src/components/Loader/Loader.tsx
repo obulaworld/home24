@@ -5,7 +5,7 @@ import './Loader.css';
 
 const Loader = () => {
   return (
-    <div className='loader'>
+    <div className='loader' data-testid='test-loader'>
       <BeatLoader size={15} color='#f45334' css='margin-right: 1rem' />
     </div>
   );

@@ -10,9 +10,11 @@ interface IProductListProps {
 
 export default function ProductList({ categories }: IProductListProps) {
   const articles = categories.map((category: Category) => {
-    return category.categoryArticles.articles.map((article: Article, index: number) => {
-      return <ArticleCard key={index} article={article} />;
-    });
+    return category.categoryArticles.articles.map(
+      (article: Article, index: number) => {
+        return <ArticleCard key={index} article={article} />;
+      },
+    );
   });
 
   return (

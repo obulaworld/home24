@@ -8,11 +8,11 @@
   grid-gap: 16px;
   grid-template-columns: 13% 50%;
   margin: 0 auto;
-  width: 60rem;
+  width: 70rem;
 }
 
-@media only screen and (min-width: 1200px) {
-  .main {
-    width: 70rem;
+@media only screen and (max-width: 768px) {
+    .main {
+      width: auto;
+    }
   }
-}

@@ -1,7 +1,4 @@
 .breadcrumb {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
   background-color: #fff;
   grid-area: breadcrumb;
   margin-bottom: 24px;
@@ -22,7 +19,7 @@
 }
 
 .breadCrumbLocationText {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .breadCrumbLocationText::after {
@@ -47,4 +44,32 @@
 .breadCrumbLocationResult {
   color: #767a81;
   font-size: 0.625rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .breadCrumbHeaderContainer,
+  .breadCrumbLocation,
+  .breadCrumbheadeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .breadCrumbLocation {
+    border-bottom: 0.0625rem solid #f2f2f2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .breadcrumb {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .breadCrumbSorterText,
+  .breadCrumbSorter {
+    font-size: 0.5rem;
+  }
 }

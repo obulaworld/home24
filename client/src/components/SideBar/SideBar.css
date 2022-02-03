@@ -31,6 +31,19 @@
   color: #000;
 }
 
-.sidebarMenuActive > a, .sidebarMenu:hover > a {
+.sidebarMenuActive > a,
+.sidebarMenu:hover > a {
   color: #f45334;
 }
+
+@media only screen and (min-width: 100px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+    .sidebar {
+      display: block;
+    }
+  }

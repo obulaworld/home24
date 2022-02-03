@@ -36,5 +36,9 @@ body {
 
 .content {
   grid-area: content;
-  grid-column: span 2;
+  grid-column: span 3;
+}
+
+a {
+  text-decoration: none;
 }

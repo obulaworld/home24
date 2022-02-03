@@ -13,40 +13,64 @@ const Header = ({ categories, sortType, setSortType }: IHeaderProps) => {
     window.location.pathname.includes(category.name.toLowerCase()),
   );
   return (
-    <div className='breadCrumbheadeContainer'>
-      <div>
-        <span className='breadCrumbheaderText'>
-          {currentCategory ? currentCategory.name : 'Möbel'}
-        </span>
+    <>
+      <div className='breadCrumbheadeContainer'>
+        <div>
+          <span className='breadCrumbheaderText'>
+            {currentCategory ? currentCategory.name : 'Möbel'}
+          </span>
+        </div>
+        <div className='breadCrumbSorterContainer'>
+          <div className='breadCrumbSorterText'>Sortiere nach:</div>
+          <div
+            onClick={() => setSortType(SORT_TYPE.ALPHABETICALLY)}
+            className={`breadCrumbSorter ${
+              sortType === SORT_TYPE.ALPHABETICALLY
+                ? 'breadCrumbSorterActive'
+                : ''
+            }`}
+          >
+            Alphabetisch
+          </div>
+          <div
+            onClick={() => setSortType(SORT_TYPE.HIGH_TO_LOW)}
+            className={`breadCrumbSorter ${
+              sortType === SORT_TYPE.HIGH_TO_LOW ? 'breadCrumbSorterActive' : ''
+            }`}
+          >
+            Preis - Hoch zu Niedrig
+          </div>
+          <div
+            onClick={() => setSortType(SORT_TYPE.LOW_TO_HIGH)}
+            className={`breadCrumbSorter ${
+              sortType === SORT_TYPE.LOW_TO_HIGH ? 'breadCrumbSorterActive' : ''
+            }`}
+          >
+            Preis - Niedrig zu Hoch
+          </div>
+        </div>
       </div>
-      <div className='breadCrumbSorterContainer'>
-        <div className='breadCrumbSorterText'>Sortiere nach:</div>
-        <div
-          onClick={() => setSortType(SORT_TYPE.ALPHABETICALLY)}
-          className={`breadCrumbSorter ${
-            sortType === SORT_TYPE.ALPHABETICALLY ? 'breadCrumbSorterActive' : ''
-          }`}
-        >
-          Alphabetisch
-        </div>
-        <div
-          onClick={() => setSortType(SORT_TYPE.HIGH_TO_LOW)}
-          className={`breadCrumbSorter ${
-            sortType === SORT_TYPE.HIGH_TO_LOW ? 'breadCrumbSorterActive' : ''
-          }`}
-        >
-          Preis - Hoch zu Niedrig
-        </div>
-        <div
-          onClick={() => setSortType(SORT_TYPE.LOW_TO_HIGH)}
-          className={`breadCrumbSorter ${
-            sortType === SORT_TYPE.LOW_TO_HIGH ? 'breadCrumbSorterActive' : ''
-          }`}
-        >
-          Preis - Niedrig zu Hoch
+      <div className='breadCrumbCategoriesMobile'>
+        <div>Kategorien:</div>
+        <div className='categoriesListMobile'>
+          {categories[0].childrenCategories.map(({ name, urlPath }, index) => {
+            return (
+              <a href={`/${urlPath}`}>
+                <div
+                  className={`breadCrumbSorter ${
+                    window.location.pathname.includes(name.toLowerCase())
+                      ? 'breadCrumbSorterActive'
+                      : ''
+                  }`}
+                >
+                  {name}
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

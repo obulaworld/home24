@@ -17,7 +17,8 @@
   text-transform: capitalize;
 }
 
-.breadCrumbSorter:hover, .breadCrumbSorterActive {
+.breadCrumbSorter:hover,
+.breadCrumbSorterActive {
   background-color: transparent;
   border: 0.0625rem solid #f45334;
   color: #f45334;
@@ -42,4 +43,30 @@
 .breadCrumbSorterContainer {
   display: flex;
   align-items: center;
+}
+
+.breadCrumbCategoriesMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .breadCrumbCategoriesMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .breadCrumbheadeContainer {
+    border-bottom: 0.0625rem solid #f2f2f2;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .categoriesListMobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: .5rem;
+  }
 }

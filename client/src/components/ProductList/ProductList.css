@@ -1,6 +1,7 @@
 .articles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
 }
 
 .logoContainer {
@@ -8,8 +9,20 @@
   width: 118px;
 }
 
-@media only screen and (min-width: 1200px) {
-  .main {
-    width: 70rem;
+@media only screen and (max-width: 900px) {
+  .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .articles {
+    grid-template-columns: 1fr;
   }
 }
